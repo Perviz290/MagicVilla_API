@@ -2,9 +2,10 @@
 
 namespace MagicVilla_VillaAPI.Dto
 {
-    public class VillaDTO
+    public class VillaUpdateDTO
     {
 
+        [Required]
         public int Id { get; set; }
 
         [Required]
@@ -21,6 +22,8 @@ namespace MagicVilla_VillaAPI.Dto
 
 
 
+
+      
 
 
 
