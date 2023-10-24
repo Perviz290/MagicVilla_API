@@ -12,8 +12,9 @@ builder.Services.AddDbContext<AppDbContext>(option =>
     option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultSQLConnection"));
 }) ;
 
-// connect IVillaRepo
+// connect Repository -Dependency Injection
 builder.Services.AddScoped <IVillaRepository ,VillaRepository>();
+builder.Services.AddScoped<IVillaNumberRepository ,VillaNumberRepository>();
 
 //connect AutoMapper
 builder.Services.AddAutoMapper(typeof(MappingConfig));
